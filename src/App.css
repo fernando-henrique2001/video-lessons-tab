@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+.video {
+  height: 400px;
+  width: 1140px;
+  border: none;
+  margin-right: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 510px;
+  padding: 30px;
+  background-color: black;
+}
+
+
+.comment {
+  background-color: greenyellow;
+  border: 1px solid black;
+  max-width: 500px;
+}
+
+.comments h2 {
+  margin: 0 auto;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.comments {
+  background-color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.listItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  width: 100%;
+  
 }
+
+button {
+  height: 60px;
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  
+}
+
+.accordions{
+  flex-grow: 1;
+  background-color: #ededed60;
+  padding: 10px;;
+  display: flex;
+
+}
+
+.accordion-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.list-hide
+, .list{
+  overflow: hidden;
+  height: 0;
+  width: 90%;
+  transition: all 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.list{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  height: 400px;
+}
+
+.module{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 60px;
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
