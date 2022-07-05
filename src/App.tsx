@@ -18,18 +18,32 @@ function App() {
         { name: "Gabriel", comment: "This is a comment" },
         { name: "Fernando", comment: "Video Top" },
       ],
+      watched: false
     },
     {
       title: "video 02",
       url: "https://www.loom.com/embed/9f5183473ba74c3aaa3a6fa557054718",
       comments: [],
+      watched: false
     },
     {
       title: "video 03",
       url: "https://www.loom.com/embed/1d9a969717f543d8894ee5d0f7cab4e8",
       comments: [],
+      watched: true
     },
   ];
+
+  const percentual = () => {
+    const videosWhatched = videos.filter((video) => {
+      if (video.watched) {
+        return video
+      }
+    })
+
+    const percentual = (videosWhatched.length / videos.length) * 100;
+    return percentual;
+  }
 
   const onClickSetVideo = (video: number) => {
     console.log(video);
@@ -90,6 +104,12 @@ function App() {
               <p> {comment.comment}</p>
             </div>
           ))}
+      </div>
+      <div className="container_progresso">
+        <div className="progresso">
+          <div className="barra_progresso" style={{ width: `${percentual()}%` }}>
+          </div>
+        </div>
       </div>
     </>
   );
