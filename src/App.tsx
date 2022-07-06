@@ -41,7 +41,7 @@ function App() {
       }
     })
 
-    const percentual = (videosWhatched.length / videos.length) * 100;
+    const percentual = Math.floor((videosWhatched.length / videos.length) * 100);
     return percentual;
   }
 
@@ -108,6 +108,7 @@ function App() {
       <div className="container_progresso">
         <div className="progresso">
           <div className="barra_progresso" style={{ width: `${percentual()}%` }}>
+            <span >{`${percentual()}%`}</span>
           </div>
         </div>
       </div>

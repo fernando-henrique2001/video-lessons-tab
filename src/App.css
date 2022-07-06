@@ -87,19 +87,25 @@ button {
 }
 
 .progresso {
-  background-color: red;
+  background-color: #e0e0de;
   width: 400px;
-  height: 50px;
-  border-radius: 70px;
+  height: 20px;
+  border-radius: 50px;
   display: flex;
   justify-content: start;
 }
 
 .barra_progresso {
-  background-color: white;
+  background-color: #6a1b9a;
   height: 100%;
-  border-radius: 75px;
+  border-radius: inherit;
   transition: 0.5s;
+  text-align: end;
+}
+.barra_progresso span {
+  color: white;
+  font-weight: "bold";
+  padding: 5px;
 }
 
 .container_progresso {
